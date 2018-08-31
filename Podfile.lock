@@ -1,0 +1,35 @@
+PODS:
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - Swinject (2.4.1)
+  - SwinjectStoryboard (2.0.2):
+    - Swinject (~> 2.4)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - SDWebImage
+  - Swinject
+  - SwinjectStoryboard
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GoogleMaps
+    - SDWebImage
+    - Swinject
+    - SwinjectStoryboard
+
+SPEC CHECKSUMS:
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  Swinject: f7f15a9672e99328c1f07f277091087917215700
+  SwinjectStoryboard: 365698aec11b57c6b14a3c1f52d0308759d377bf
+
+PODFILE CHECKSUM: ef6737829750cc3697a86c3c94966cbfff83b168
+
+COCOAPODS: 1.5.0

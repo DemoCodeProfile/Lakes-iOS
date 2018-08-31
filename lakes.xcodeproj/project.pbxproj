@@ -1,0 +1,834 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C44A09AF23E186DD5910592 /* Pods_lakes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038387CB23CE3F36251CCD0F /* Pods_lakes.framework */; };
+		86F8234CAA4913449ECEC49F /* Pods_lakesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F62EA2410DF2907E7C0AD93 /* Pods_lakesTests.framework */; };
+		DD2DD6DD21394C25003054A9 /* JsonLakesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2DD6DC21394C25003054A9 /* JsonLakesRepositoryTest.swift */; };
+		DD2DD6E121394D69003054A9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2DD6E021394D69003054A9 /* Data.swift */; };
+		DD3EA2952137AE4200A238E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2942137AE4200A238E7 /* AppDelegate.swift */; };
+		DD3EA29A2137AE4200A238E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3EA2982137AE4200A238E7 /* Main.storyboard */; };
+		DD3EA29C2137AE4700A238E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3EA29B2137AE4700A238E7 /* Assets.xcassets */; };
+		DD3EA29F2137AE4700A238E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3EA29D2137AE4700A238E7 /* LaunchScreen.storyboard */; };
+		DD3EA2BD2137B23A00A238E7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2BC2137B23A00A238E7 /* MapViewController.swift */; };
+		DD3EA2BF2137B25C00A238E7 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2BE2137B25C00A238E7 /* MapPresenter.swift */; };
+		DD3EA2C12137B27800A238E7 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2C02137B27800A238E7 /* MapInteractor.swift */; };
+		DD3EA2C32137B29700A238E7 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2C22137B29700A238E7 /* MapRouter.swift */; };
+		DD3EA2C52137B2B300A238E7 /* MapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2C42137B2B300A238E7 /* MapAssembly.swift */; };
+		DD3EA2C72137B2DE00A238E7 /* LakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2C62137B2DE00A238E7 /* LakeViewController.swift */; };
+		DD3EA2C92137B2F400A238E7 /* LakePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2C82137B2F300A238E7 /* LakePresenter.swift */; };
+		DD3EA2CB2137B31700A238E7 /* LakeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2CA2137B31600A238E7 /* LakeInteractor.swift */; };
+		DD3EA2CD2137B33100A238E7 /* LakeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2CC2137B33100A238E7 /* LakeRouter.swift */; };
+		DD3EA2CF2137B34400A238E7 /* LakeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2CE2137B34400A238E7 /* LakeAssembly.swift */; };
+		DD3EA2D12137B38C00A238E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2D02137B38C00A238E7 /* Constants.swift */; };
+		DD3EA2D32137B39600A238E7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2D22137B39600A238E7 /* Data.swift */; };
+		DD3EA2D82137B43100A238E7 /* Lake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2D72137B43100A238E7 /* Lake.swift */; };
+		DD3EA2DA2137B44D00A238E7 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2D92137B44C00A238E7 /* ApplicationAssembly.swift */; };
+		DD3EA2DC2137B46E00A238E7 /* BaseSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2DB2137B46E00A238E7 /* BaseSpecification.swift */; };
+		DD3EA2DE2137B48500A238E7 /* JsonSpecifiaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2DD2137B48500A238E7 /* JsonSpecifiaction.swift */; };
+		DD3EA2E02137B49D00A238E7 /* LakeByIdSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2DF2137B49D00A238E7 /* LakeByIdSpecification.swift */; };
+		DD3EA2E22137B4C100A238E7 /* JsonLakesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2E12137B4C100A238E7 /* JsonLakesRepository.swift */; };
+		DD3EA2E42137B4E500A238E7 /* ImageLoadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EA2E32137B4E500A238E7 /* ImageLoadingService.swift */; };
+		DD58C96C2137EE9A00A29C32 /* MapInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58C96B2137EE9A00A29C32 /* MapInteractorTest.swift */; };
+		DD58C9722137F0D900A29C32 /* LakesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58C9712137F0D800A29C32 /* LakesRepositoryMock.swift */; };
+		DD58C9742137F90D00A29C32 /* MapInteractorOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58C9732137F90D00A29C32 /* MapInteractorOutputMock.swift */; };
+		DDE974B22139157B0044CBCD /* MapPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE974B12139157B0044CBCD /* MapPresenterTest.swift */; };
+		DDE974B4213916940044CBCD /* MapInteractorInputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE974B3213916940044CBCD /* MapInteractorInputMock.swift */; };
+		DDE974B6213917BA0044CBCD /* MapViewInputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE974B5213917BA0044CBCD /* MapViewInputMock.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD3EA2A62137AE4700A238E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD3EA2892137AE4200A238E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD3EA2902137AE4200A238E7;
+			remoteInfo = lakes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		038387CB23CE3F36251CCD0F /* Pods_lakes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lakes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E2244F4E4E79CF542DB1CB /* Pods-lakesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lakesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-lakesTests/Pods-lakesTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F62EA2410DF2907E7C0AD93 /* Pods_lakesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lakesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BCD5C2A06531E17C1CA015 /* Pods-lakes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lakes.release.xcconfig"; path = "Pods/Target Support Files/Pods-lakes/Pods-lakes.release.xcconfig"; sourceTree = "<group>"; };
+		B074DF1222F8690C0C3B5021 /* Pods-lakesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lakesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lakesTests/Pods-lakesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD2DD6DC21394C25003054A9 /* JsonLakesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLakesRepositoryTest.swift; sourceTree = "<group>"; };
+		DD2DD6E021394D69003054A9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		DD3EA2912137AE4200A238E7 /* lakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3EA2942137AE4200A238E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD3EA2992137AE4200A238E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD3EA29B2137AE4700A238E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD3EA29E2137AE4700A238E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD3EA2A02137AE4700A238E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD3EA2A52137AE4700A238E7 /* lakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lakesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3EA2AB2137AE4700A238E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD3EA2BC2137B23A00A238E7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DD3EA2BE2137B25C00A238E7 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		DD3EA2C02137B27800A238E7 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		DD3EA2C22137B29700A238E7 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		DD3EA2C42137B2B300A238E7 /* MapAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssembly.swift; sourceTree = "<group>"; };
+		DD3EA2C62137B2DE00A238E7 /* LakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakeViewController.swift; sourceTree = "<group>"; };
+		DD3EA2C82137B2F300A238E7 /* LakePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakePresenter.swift; sourceTree = "<group>"; };
+		DD3EA2CA2137B31600A238E7 /* LakeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakeInteractor.swift; sourceTree = "<group>"; };
+		DD3EA2CC2137B33100A238E7 /* LakeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakeRouter.swift; sourceTree = "<group>"; };
+		DD3EA2CE2137B34400A238E7 /* LakeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakeAssembly.swift; sourceTree = "<group>"; };
+		DD3EA2D02137B38C00A238E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DD3EA2D22137B39600A238E7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		DD3EA2D72137B43100A238E7 /* Lake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lake.swift; sourceTree = "<group>"; };
+		DD3EA2D92137B44C00A238E7 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		DD3EA2DB2137B46E00A238E7 /* BaseSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSpecification.swift; sourceTree = "<group>"; };
+		DD3EA2DD2137B48500A238E7 /* JsonSpecifiaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonSpecifiaction.swift; sourceTree = "<group>"; };
+		DD3EA2DF2137B49D00A238E7 /* LakeByIdSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakeByIdSpecification.swift; sourceTree = "<group>"; };
+		DD3EA2E12137B4C100A238E7 /* JsonLakesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLakesRepository.swift; sourceTree = "<group>"; };
+		DD3EA2E32137B4E500A238E7 /* ImageLoadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingService.swift; sourceTree = "<group>"; };
+		DD58C96B2137EE9A00A29C32 /* MapInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorTest.swift; sourceTree = "<group>"; };
+		DD58C9712137F0D800A29C32 /* LakesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakesRepositoryMock.swift; sourceTree = "<group>"; };
+		DD58C9732137F90D00A29C32 /* MapInteractorOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorOutputMock.swift; sourceTree = "<group>"; };
+		DDE974B12139157B0044CBCD /* MapPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterTest.swift; sourceTree = "<group>"; };
+		DDE974B3213916940044CBCD /* MapInteractorInputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorInputMock.swift; sourceTree = "<group>"; };
+		DDE974B5213917BA0044CBCD /* MapViewInputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewInputMock.swift; sourceTree = "<group>"; };
+		F881B80C132A3501DEAA9D6A /* Pods-lakes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lakes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lakes/Pods-lakes.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD3EA28E2137AE4200A238E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C44A09AF23E186DD5910592 /* Pods_lakes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD3EA2A22137AE4700A238E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F8234CAA4913449ECEC49F /* Pods_lakesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3E4C63D0487573C09150085 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F881B80C132A3501DEAA9D6A /* Pods-lakes.debug.xcconfig */,
+				78BCD5C2A06531E17C1CA015 /* Pods-lakes.release.xcconfig */,
+				B074DF1222F8690C0C3B5021 /* Pods-lakesTests.debug.xcconfig */,
+				04E2244F4E4E79CF542DB1CB /* Pods-lakesTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D3B722061A6414AE8598C578 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				038387CB23CE3F36251CCD0F /* Pods_lakes.framework */,
+				2F62EA2410DF2907E7C0AD93 /* Pods_lakesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD2DD6DF21394D37003054A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD2DD6E021394D69003054A9 /* Data.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD3EA2882137AE4200A238E7 = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2932137AE4200A238E7 /* lakes */,
+				DD3EA2A82137AE4700A238E7 /* lakesTests */,
+				DD3EA2922137AE4200A238E7 /* Products */,
+				B3E4C63D0487573C09150085 /* Pods */,
+				D3B722061A6414AE8598C578 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DD3EA2922137AE4200A238E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2912137AE4200A238E7 /* lakes.app */,
+				DD3EA2A52137AE4700A238E7 /* lakesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD3EA2932137AE4200A238E7 /* lakes */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2B52137AF9E00A238E7 /* Application */,
+				DD3EA2B62137AFAA00A238E7 /* Models */,
+				DD3EA2B72137AFC000A238E7 /* Services */,
+				DD3EA2B82137AFD600A238E7 /* MapLakes */,
+				DD3EA2B92137AFE900A238E7 /* LakeDetails */,
+				DD3EA2B42137AE5400A238E7 /* Supporting Files */,
+			);
+			path = lakes;
+			sourceTree = "<group>";
+		};
+		DD3EA2A82137AE4700A238E7 /* lakesTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD2DD6DF21394D37003054A9 /* Supporting Files */,
+				DD58C96F2137F09A00A29C32 /* Services */,
+				DD58C96A2137EE7900A29C32 /* MapLakes */,
+				DD3EA2AB2137AE4700A238E7 /* Info.plist */,
+			);
+			path = lakesTests;
+			sourceTree = "<group>";
+		};
+		DD3EA2B42137AE5400A238E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2982137AE4200A238E7 /* Main.storyboard */,
+				DD3EA29B2137AE4700A238E7 /* Assets.xcassets */,
+				DD3EA29D2137AE4700A238E7 /* LaunchScreen.storyboard */,
+				DD3EA2A02137AE4700A238E7 /* Info.plist */,
+				DD3EA2D02137B38C00A238E7 /* Constants.swift */,
+				DD3EA2D22137B39600A238E7 /* Data.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD3EA2B52137AF9E00A238E7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2942137AE4200A238E7 /* AppDelegate.swift */,
+				DD3EA2D92137B44C00A238E7 /* ApplicationAssembly.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DD3EA2B62137AFAA00A238E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2D72137B43100A238E7 /* Lake.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD3EA2B72137AFC000A238E7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2D42137B3D100A238E7 /* Specifications */,
+				DD3EA2D62137B3ED00A238E7 /* Repositories */,
+				DD3EA2E32137B4E500A238E7 /* ImageLoadingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DD3EA2B82137AFD600A238E7 /* MapLakes */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2BA2137AFFF00A238E7 /* Modules */,
+			);
+			path = MapLakes;
+			sourceTree = "<group>";
+		};
+		DD3EA2B92137AFE900A238E7 /* LakeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2BB2137B00C00A238E7 /* Modules */,
+			);
+			path = LakeDetails;
+			sourceTree = "<group>";
+		};
+		DD3EA2BA2137AFFF00A238E7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2BC2137B23A00A238E7 /* MapViewController.swift */,
+				DD3EA2BE2137B25C00A238E7 /* MapPresenter.swift */,
+				DD3EA2C02137B27800A238E7 /* MapInteractor.swift */,
+				DD3EA2C22137B29700A238E7 /* MapRouter.swift */,
+				DD3EA2C42137B2B300A238E7 /* MapAssembly.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DD3EA2BB2137B00C00A238E7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2C62137B2DE00A238E7 /* LakeViewController.swift */,
+				DD3EA2C82137B2F300A238E7 /* LakePresenter.swift */,
+				DD3EA2CA2137B31600A238E7 /* LakeInteractor.swift */,
+				DD3EA2CC2137B33100A238E7 /* LakeRouter.swift */,
+				DD3EA2CE2137B34400A238E7 /* LakeAssembly.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DD3EA2D42137B3D100A238E7 /* Specifications */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2DB2137B46E00A238E7 /* BaseSpecification.swift */,
+				DD3EA2D52137B3E300A238E7 /* Default */,
+			);
+			path = Specifications;
+			sourceTree = "<group>";
+		};
+		DD3EA2D52137B3E300A238E7 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2DD2137B48500A238E7 /* JsonSpecifiaction.swift */,
+				DD3EA2DF2137B49D00A238E7 /* LakeByIdSpecification.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		DD3EA2D62137B3ED00A238E7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EA2E12137B4C100A238E7 /* JsonLakesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DD58C96A2137EE7900A29C32 /* MapLakes */ = {
+			isa = PBXGroup;
+			children = (
+				DDE974B02139153C0044CBCD /* Modules */,
+			);
+			name = MapLakes;
+			sourceTree = "<group>";
+		};
+		DD58C96F2137F09A00A29C32 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DD58C9702137F0AC00A29C32 /* Repositories */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		DD58C9702137F0AC00A29C32 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				DD58C9712137F0D800A29C32 /* LakesRepositoryMock.swift */,
+				DD2DD6DC21394C25003054A9 /* JsonLakesRepositoryTest.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		DDE974B02139153C0044CBCD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DD58C96B2137EE9A00A29C32 /* MapInteractorTest.swift */,
+				DD58C9732137F90D00A29C32 /* MapInteractorOutputMock.swift */,
+				DDE974B12139157B0044CBCD /* MapPresenterTest.swift */,
+				DDE974B3213916940044CBCD /* MapInteractorInputMock.swift */,
+				DDE974B5213917BA0044CBCD /* MapViewInputMock.swift */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD3EA2902137AE4200A238E7 /* lakes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD3EA2AE2137AE4700A238E7 /* Build configuration list for PBXNativeTarget "lakes" */;
+			buildPhases = (
+				C629E79ED0E527C2836775B3 /* [CP] Check Pods Manifest.lock */,
+				DD3EA28D2137AE4200A238E7 /* Sources */,
+				DD3EA28E2137AE4200A238E7 /* Frameworks */,
+				DD3EA28F2137AE4200A238E7 /* Resources */,
+				062CA8C853360204B5A304BA /* [CP] Embed Pods Frameworks */,
+				6AE2936CF56C59772826F6A0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lakes;
+			productName = lakes;
+			productReference = DD3EA2912137AE4200A238E7 /* lakes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD3EA2A42137AE4700A238E7 /* lakesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD3EA2B12137AE4700A238E7 /* Build configuration list for PBXNativeTarget "lakesTests" */;
+			buildPhases = (
+				040219AFA11B99DD450D79E4 /* [CP] Check Pods Manifest.lock */,
+				DD3EA2A12137AE4700A238E7 /* Sources */,
+				DD3EA2A22137AE4700A238E7 /* Frameworks */,
+				DD3EA2A32137AE4700A238E7 /* Resources */,
+				1B6A261FCC317ECEE5AD5F8D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD3EA2A72137AE4700A238E7 /* PBXTargetDependency */,
+			);
+			name = lakesTests;
+			productName = lakesTests;
+			productReference = DD3EA2A52137AE4700A238E7 /* lakesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD3EA2892137AE4200A238E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Вадим";
+				TargetAttributes = {
+					DD3EA2902137AE4200A238E7 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					DD3EA2A42137AE4700A238E7 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = DD3EA2902137AE4200A238E7;
+					};
+				};
+			};
+			buildConfigurationList = DD3EA28C2137AE4200A238E7 /* Build configuration list for PBXProject "lakes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD3EA2882137AE4200A238E7;
+			productRefGroup = DD3EA2922137AE4200A238E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD3EA2902137AE4200A238E7 /* lakes */,
+				DD3EA2A42137AE4700A238E7 /* lakesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD3EA28F2137AE4200A238E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3EA29F2137AE4700A238E7 /* LaunchScreen.storyboard in Resources */,
+				DD3EA29C2137AE4700A238E7 /* Assets.xcassets in Resources */,
+				DD3EA29A2137AE4200A238E7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD3EA2A32137AE4700A238E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		040219AFA11B99DD450D79E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lakesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		062CA8C853360204B5A304BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-lakes/Pods-lakes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lakes/Pods-lakes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B6A261FCC317ECEE5AD5F8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-lakesTests/Pods-lakesTests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lakesTests/Pods-lakesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AE2936CF56C59772826F6A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-lakes/Pods-lakes-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lakes/Pods-lakes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C629E79ED0E527C2836775B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lakes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD3EA28D2137AE4200A238E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3EA2C52137B2B300A238E7 /* MapAssembly.swift in Sources */,
+				DD3EA2DA2137B44D00A238E7 /* ApplicationAssembly.swift in Sources */,
+				DD3EA2952137AE4200A238E7 /* AppDelegate.swift in Sources */,
+				DD3EA2D82137B43100A238E7 /* Lake.swift in Sources */,
+				DD3EA2BD2137B23A00A238E7 /* MapViewController.swift in Sources */,
+				DD3EA2CD2137B33100A238E7 /* LakeRouter.swift in Sources */,
+				DD3EA2E42137B4E500A238E7 /* ImageLoadingService.swift in Sources */,
+				DD3EA2C92137B2F400A238E7 /* LakePresenter.swift in Sources */,
+				DD3EA2C32137B29700A238E7 /* MapRouter.swift in Sources */,
+				DD3EA2DE2137B48500A238E7 /* JsonSpecifiaction.swift in Sources */,
+				DD3EA2E22137B4C100A238E7 /* JsonLakesRepository.swift in Sources */,
+				DD3EA2CF2137B34400A238E7 /* LakeAssembly.swift in Sources */,
+				DD3EA2E02137B49D00A238E7 /* LakeByIdSpecification.swift in Sources */,
+				DD3EA2C72137B2DE00A238E7 /* LakeViewController.swift in Sources */,
+				DD3EA2D32137B39600A238E7 /* Data.swift in Sources */,
+				DD3EA2BF2137B25C00A238E7 /* MapPresenter.swift in Sources */,
+				DD3EA2C12137B27800A238E7 /* MapInteractor.swift in Sources */,
+				DD3EA2CB2137B31700A238E7 /* LakeInteractor.swift in Sources */,
+				DD3EA2DC2137B46E00A238E7 /* BaseSpecification.swift in Sources */,
+				DD3EA2D12137B38C00A238E7 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD3EA2A12137AE4700A238E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE974B4213916940044CBCD /* MapInteractorInputMock.swift in Sources */,
+				DD58C9742137F90D00A29C32 /* MapInteractorOutputMock.swift in Sources */,
+				DD58C9722137F0D900A29C32 /* LakesRepositoryMock.swift in Sources */,
+				DD58C96C2137EE9A00A29C32 /* MapInteractorTest.swift in Sources */,
+				DDE974B6213917BA0044CBCD /* MapViewInputMock.swift in Sources */,
+				DDE974B22139157B0044CBCD /* MapPresenterTest.swift in Sources */,
+				DD2DD6DD21394C25003054A9 /* JsonLakesRepositoryTest.swift in Sources */,
+				DD2DD6E121394D69003054A9 /* Data.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD3EA2A72137AE4700A238E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD3EA2902137AE4200A238E7 /* lakes */;
+			targetProxy = DD3EA2A62137AE4700A238E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD3EA2982137AE4200A238E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3EA2992137AE4200A238E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD3EA29D2137AE4700A238E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3EA29E2137AE4700A238E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD3EA2AC2137AE4700A238E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD3EA2AD2137AE4700A238E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD3EA2AF2137AE4700A238E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F881B80C132A3501DEAA9D6A /* Pods-lakes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7684CT8V7;
+				INFOPLIST_FILE = "$(SRCROOT)/lakes/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.lakes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD3EA2B02137AE4700A238E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78BCD5C2A06531E17C1CA015 /* Pods-lakes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7684CT8V7;
+				INFOPLIST_FILE = "$(SRCROOT)/lakes/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.lakes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD3EA2B22137AE4700A238E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B074DF1222F8690C0C3B5021 /* Pods-lakesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7684CT8V7;
+				INFOPLIST_FILE = lakesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.lakesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lakes.app/lakes";
+			};
+			name = Debug;
+		};
+		DD3EA2B32137AE4700A238E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E2244F4E4E79CF542DB1CB /* Pods-lakesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7684CT8V7;
+				INFOPLIST_FILE = lakesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.lakesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lakes.app/lakes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD3EA28C2137AE4200A238E7 /* Build configuration list for PBXProject "lakes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3EA2AC2137AE4700A238E7 /* Debug */,
+				DD3EA2AD2137AE4700A238E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD3EA2AE2137AE4700A238E7 /* Build configuration list for PBXNativeTarget "lakes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3EA2AF2137AE4700A238E7 /* Debug */,
+				DD3EA2B02137AE4700A238E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD3EA2B12137AE4700A238E7 /* Build configuration list for PBXNativeTarget "lakesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3EA2B22137AE4700A238E7 /* Debug */,
+				DD3EA2B32137AE4700A238E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD3EA2892137AE4200A238E7 /* Project object */;
+}
