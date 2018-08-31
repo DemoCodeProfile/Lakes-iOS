@@ -1,6 +1,6 @@
 ### Lakes
 [![License](https://img.shields.io/github/license/DemoCodeProfile/Lakes-iOS.svg)](https://github.com/DemoCodeProfile/Lakes-iOS/blob/master/LICENSE) 
-[![Architecture](https://img.shields.io/badge/architecture-VIPER-orange.svg)]()
+[![Architecture](https://img.shields.io/badge/architecture-VIPER-orange.svg)](https://github.com/DemoCodeProfile/Lakes-iOS/)
 
 This is demo code Clean Architecture (VIPER) - MVP architecture pattern and IoC (DI).
 
