@@ -14,20 +14,20 @@ protocol MapWireframeProtocol: class {
 }
 
 class MapRouter: MapWireframeProtocol {
+    
     private weak var mViewController: MapViewController?
     
-    func openLakeDetail(){
+    func openLakeDetail() {
         mViewController?.performSegue(withIdentifier: SEGUE_TO_LAKE, sender: nil)
     }
     
-    func passDataFromMap(_ lake: Lake?, _ segue: UIStoryboardSegue){
+    func passDataFromMap(_ lake: Lake?, _ segue: UIStoryboardSegue) {
         if let vc = segue.destination as? LakeViewController {
-            vc.mPresenter?.setLake(lake)
+            vc.presenter?.setLake(lake)
         }
     }
     
-    func setViewController(viewController: MapViewController?){
+    func setViewController(viewController: MapViewController?) {
         self.mViewController = viewController
     }
-    
 }

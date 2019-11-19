@@ -37,12 +37,12 @@ class LakeAssembly: Assembly {
             let specification = LakeByIdSpecification(id: 0)
             let interactor = resolver.resolve(LakeInteractor.self, argument: presenter)
             presenter.setSpecification(specification)
-            presenter.setInteractor(interactor)
+            presenter.interactor = interactor
             return presenter
         }
         
         container.storyboardInitCompleted(LakeViewController.self) { (resolver, viewController) in
-            viewController.mPresenter = resolver.resolve(LakePresenter.self, argument: viewController)
+            viewController.presenter = resolver.resolve(LakePresenter.self, argument: viewController)
         }
         
     }

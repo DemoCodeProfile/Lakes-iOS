@@ -15,7 +15,7 @@ protocol ImageLoadingServiceProtocol: class {
 
 class ImageLoadingService: ImageLoadingServiceProtocol {
     func loadImage(_ url: URL, closure: @escaping (UIImage?) -> Void) {
-        SDWebImageManager.shared().loadImage(with: url, options: .cacheMemoryOnly, progress: nil) { (image, data, error, type, finished, url) in
+        SDWebImageManager.shared.loadImage(with: url, options: .refreshCached, progress: nil) { (image, data, error, type, finished, url) in
             closure(image)
         }
     }

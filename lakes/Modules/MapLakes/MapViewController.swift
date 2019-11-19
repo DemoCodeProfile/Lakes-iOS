@@ -21,11 +21,10 @@ protocol MapViewOutputProtocol: class {
     func passDataFromMap(_ lake: Lake?, _ segue: UIStoryboardSegue)
 }
 
-class MapViewController: UIViewController, MapViewInputProtocol {
+final class MapViewController: UIViewController, MapViewInputProtocol {
     
     private var mCurrentLake: Lake?
     var mPresenter: MapViewOutputProtocol?
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.mPresenter?.passDataFromMap(self.mCurrentLake, segue)
@@ -48,7 +47,6 @@ class MapViewController: UIViewController, MapViewInputProtocol {
         alert.addAction(alertAction)
         self.present(alert, animated: true, completion: nil)
     }
-    
 }
 
 extension MapViewController: GMSMapViewDelegate {

@@ -39,33 +39,35 @@ class LakeInteractor: LakeInteractorInputProtocol {
         self.init(imageLoadingService: imageLoadingService, repository: repository, presenter: nil)
     }
     
-    convenience init(repository: LakesRepositoryProtocol?){
+    convenience init(repository: LakesRepositoryProtocol?) {
         self.init(repository: repository, presenter: nil)
     }
     
-    func setPresenter(presenter: LakeInteractorOutputProtocol?){
+    func setPresenter(presenter: LakeInteractorOutputProtocol?) {
         self.mPresenter = presenter
     }
     
-    func getPresenter()->LakeInteractorOutputProtocol?{
+    func getPresenter() -> LakeInteractorOutputProtocol? {
         return self.mPresenter
     }
     
     func recieveLake(_ specification: BaseSpecification) {
-        mRepository?.fetchById(specification: specification, closure: { (error, lake) in
-            if let lake = lake {
+        mRepository?.fetchById(
+            specification: specification,
+            closure: { result in
+            switch result {
+            case .success(let lake):
                 self.mPresenter?.recievedLake(lake)
-            } else if let error = error {
+            case .failure(let error):
                 self.mPresenter?.fetchError(error: error)
             }
         })
     }
     
-    func loadImage(_ url: String){
+    func loadImage(_ url: String) {
         let url = URL(string: url)!
         mImageLoadingService?.loadImage(url, closure: { (image) in
             self.mPresenter?.loadedImage(image)
         })
     }
-    
 }

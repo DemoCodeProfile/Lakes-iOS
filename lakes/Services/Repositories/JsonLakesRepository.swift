@@ -15,56 +15,46 @@ enum LakeError: Error {
 //Or maybe DataManager instead Repository
 //Very simple structure repositories & interactors without executors
 protocol LakesRepositoryProtocol {
-    func fetchAll(closure: @escaping (Error?, [Lake]?)->Void)
-    func fetchById(specification: BaseSpecification, closure: @escaping (Error?, Lake?)->Void)
+    func fetchAll(closure: @escaping (Result<[Lake], LakeError>) -> Void)
+    func fetchById(specification: BaseSpecification, closure: @escaping (Result<Lake, LakeError>) -> Void)
 }
 
 class JsonLakesRepository: LakesRepositoryProtocol {
     
-    func fetchAll(closure: @escaping (Error?, [Lake]?) -> Void) {
+    func fetchAll(closure: @escaping (Result<[Lake], LakeError>) -> Void) {
         let queue = DispatchQueue(label: "fetchAll", attributes: .concurrent)
         queue.async {
             let (error, lakes) = self.parseAllLakesJSON(JSON_DATA_FROM_SERVER)
             DispatchQueue.main.async {
-                closure(error, lakes)
+                guard error != nil, let lakes = lakes else {
+                    closure(.failure(.dataError(error?.localizedDescription ?? "")))
+                    return
+                }
+                closure(.success(lakes))
             }
         }
     }
     
-    func fetchById(specification: BaseSpecification, closure: @escaping (Error?, Lake?) -> Void) {
+    func fetchById(specification: BaseSpecification, closure: @escaping (Result<Lake, LakeError>) -> Void) {
         let queue = DispatchQueue(label: "fetchById", attributes: .concurrent)
         queue.async {
-            if let specification = specification as? JsonSpecifiaction {
-                let id = specification.toJsonQuery()
-                let (error, lakes) = self.parseAllLakesJSON(JSON_DATA_FROM_SERVER)
-                if let error = error {
-                    DispatchQueue.main.async {
-                        closure(error, nil)
+            DispatchQueue.main.async {
+                if let specification = specification as? JsonSpecifiaction {
+                    let id = specification.toJsonQuery()
+                    let (error, lakes) = self.parseAllLakesJSON(JSON_DATA_FROM_SERVER)
+                    if let error = error {
+                        closure(.failure(LakeError.dataError(error.localizedDescription)))
                     }
+                    if let lake = lakes?.first(where: { $0.id == id }) {
+                        closure(.success(lake))
+                        return
+                    }
+                    closure(.failure(.notFound(NSLocalizedString("Not found", comment: ""))))
                     return
-                }
-                if let lakes = lakes, id != 0 {
-                    for lake in lakes {
-                        if lake.getId() == id {
-                            DispatchQueue.main.async {
-                                closure(nil, lake)
-                            }
-                            break
-                        }
-                    }
                 } else {
-                    DispatchQueue.main.async {
-                        let error = LakeError.notFound(NSLocalizedString("Not found", comment: ""))
-                        closure(error, nil)
-                    }
+                    closure(.failure(.dataError(NSLocalizedString("Error id data", comment: ""))))
                     return
                 }
-            } else {
-                DispatchQueue.main.async {
-                    let error = LakeError.dataError(NSLocalizedString("Error id data", comment: ""))
-                    closure(error, nil)
-                }
-                return
             }
         }
     }

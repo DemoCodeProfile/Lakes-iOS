@@ -9,7 +9,7 @@
 import UIKit
 
 protocol LakeViewInputProtocol: class {
-    var mPresenter: LakeViewOutputProtocol? { get set }
+    var presenter: LakeViewOutputProtocol? { get set }
     func recievedData(_ lake: Lake)
     func fetchError(_ error: String)
     func loadedImage(_ image: UIImage?)
@@ -28,7 +28,7 @@ protocol LakeViewOutputProtocol: class {
 
 class LakeViewController: UIViewController, LakeViewInputProtocol {
     
-    var mPresenter: LakeViewOutputProtocol?
+    var presenter: LakeViewOutputProtocol?
     
     @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var photo: UIImageView!
@@ -37,15 +37,15 @@ class LakeViewController: UIViewController, LakeViewInputProtocol {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        mPresenter?.recieveLake()
+        presenter?.recieveLake()
     }
     
     //    MARK: Recieve Lake
     func recievedData(_ lake: Lake) {
-        self.title = lake.getTitle()
-        self.titleLake.text = lake.getTitle()
-        self.descriptionLake.text = lake.getDescription()
-        self.mPresenter?.loadImage()
+        self.title = lake.title
+        self.titleLake.text = lake.title
+        self.descriptionLake.text = lake.description
+        self.presenter?.loadImage()
     }
     
     func fetchError(_ error: String) {
@@ -70,7 +70,7 @@ class LakeViewController: UIViewController, LakeViewInputProtocol {
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50)) as UIActivityIndicatorView
         
         loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.activityIndicatorViewStyle = .gray
+        loadingIndicator.style = .gray
         loadingIndicator.startAnimating()
         
         alert.view.addSubview(loadingIndicator)
@@ -96,6 +96,4 @@ class LakeViewController: UIViewController, LakeViewInputProtocol {
     func hideActivityIndicator() {
         self.imageActivityIndicator.stopAnimating()
     }
-    
-    
 }

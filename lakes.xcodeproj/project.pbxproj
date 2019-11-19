@@ -168,10 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				DD3EA2B52137AF9E00A238E7 /* Application */,
+				DD924C5C238435AA0067B245 /* Modules */,
 				DD3EA2B62137AFAA00A238E7 /* Models */,
 				DD3EA2B72137AFC000A238E7 /* Services */,
-				DD3EA2B82137AFD600A238E7 /* MapLakes */,
-				DD3EA2B92137AFE900A238E7 /* LakeDetails */,
 				DD3EA2B42137AE5400A238E7 /* Supporting Files */,
 			);
 			path = lakes;
@@ -180,9 +179,9 @@
 		DD3EA2A82137AE4700A238E7 /* lakesTests */ = {
 			isa = PBXGroup;
 			children = (
+				DDF9A53D23843D60002D9725 /* Modules */,
 				DD2DD6DF21394D37003054A9 /* Supporting Files */,
 				DD58C96F2137F09A00A29C32 /* Services */,
-				DD58C96A2137EE7900A29C32 /* MapLakes */,
 				DD3EA2AB2137AE4700A238E7 /* Info.plist */,
 			);
 			path = lakesTests;
@@ -231,32 +230,16 @@
 		DD3EA2B82137AFD600A238E7 /* MapLakes */ = {
 			isa = PBXGroup;
 			children = (
-				DD3EA2BA2137AFFF00A238E7 /* Modules */,
-			);
-			path = MapLakes;
-			sourceTree = "<group>";
-		};
-		DD3EA2B92137AFE900A238E7 /* LakeDetails */ = {
-			isa = PBXGroup;
-			children = (
-				DD3EA2BB2137B00C00A238E7 /* Modules */,
-			);
-			path = LakeDetails;
-			sourceTree = "<group>";
-		};
-		DD3EA2BA2137AFFF00A238E7 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
 				DD3EA2BC2137B23A00A238E7 /* MapViewController.swift */,
 				DD3EA2BE2137B25C00A238E7 /* MapPresenter.swift */,
 				DD3EA2C02137B27800A238E7 /* MapInteractor.swift */,
 				DD3EA2C22137B29700A238E7 /* MapRouter.swift */,
 				DD3EA2C42137B2B300A238E7 /* MapAssembly.swift */,
 			);
-			path = Modules;
+			path = MapLakes;
 			sourceTree = "<group>";
 		};
-		DD3EA2BB2137B00C00A238E7 /* Modules */ = {
+		DD3EA2B92137AFE900A238E7 /* LakeDetails */ = {
 			isa = PBXGroup;
 			children = (
 				DD3EA2C62137B2DE00A238E7 /* LakeViewController.swift */,
@@ -265,7 +248,7 @@
 				DD3EA2CC2137B33100A238E7 /* LakeRouter.swift */,
 				DD3EA2CE2137B34400A238E7 /* LakeAssembly.swift */,
 			);
-			path = Modules;
+			path = LakeDetails;
 			sourceTree = "<group>";
 		};
 		DD3EA2D42137B3D100A238E7 /* Specifications */ = {
@@ -297,7 +280,11 @@
 		DD58C96A2137EE7900A29C32 /* MapLakes */ = {
 			isa = PBXGroup;
 			children = (
-				DDE974B02139153C0044CBCD /* Modules */,
+				DD58C96B2137EE9A00A29C32 /* MapInteractorTest.swift */,
+				DD58C9732137F90D00A29C32 /* MapInteractorOutputMock.swift */,
+				DDE974B12139157B0044CBCD /* MapPresenterTest.swift */,
+				DDE974B3213916940044CBCD /* MapInteractorInputMock.swift */,
+				DDE974B5213917BA0044CBCD /* MapViewInputMock.swift */,
 			);
 			name = MapLakes;
 			sourceTree = "<group>";
@@ -319,14 +306,19 @@
 			name = Repositories;
 			sourceTree = "<group>";
 		};
-		DDE974B02139153C0044CBCD /* Modules */ = {
+		DD924C5C238435AA0067B245 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				DD58C96B2137EE9A00A29C32 /* MapInteractorTest.swift */,
-				DD58C9732137F90D00A29C32 /* MapInteractorOutputMock.swift */,
-				DDE974B12139157B0044CBCD /* MapPresenterTest.swift */,
-				DDE974B3213916940044CBCD /* MapInteractorInputMock.swift */,
-				DDE974B5213917BA0044CBCD /* MapViewInputMock.swift */,
+				DD3EA2B82137AFD600A238E7 /* MapLakes */,
+				DD3EA2B92137AFE900A238E7 /* LakeDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DDF9A53D23843D60002D9725 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DD58C96A2137EE7900A29C32 /* MapLakes */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -457,7 +449,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-lakes/Pods-lakes-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-lakes/Pods-lakes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
@@ -470,7 +462,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lakes/Pods-lakes-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lakes/Pods-lakes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1B6A261FCC317ECEE5AD5F8D /* [CP] Copy Pods Resources */ = {
@@ -479,7 +471,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-lakesTests/Pods-lakesTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-lakesTests/Pods-lakesTests-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -488,7 +480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lakesTests/Pods-lakesTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lakesTests/Pods-lakesTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6AE2936CF56C59772826F6A0 /* [CP] Copy Pods Resources */ = {
@@ -497,7 +489,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-lakes/Pods-lakes-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-lakes/Pods-lakes-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -506,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lakes/Pods-lakes-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lakes/Pods-lakes-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C629E79ED0E527C2836775B3 /* [CP] Check Pods Manifest.lock */ = {
@@ -659,6 +651,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -712,6 +705,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -730,7 +724,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.lakes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -749,7 +743,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.lakes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -770,7 +764,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.lakesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lakes.app/lakes";
 			};
@@ -792,7 +786,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadim.lakesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lakes.app/lakes";
 			};

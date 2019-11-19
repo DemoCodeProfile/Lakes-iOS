@@ -11,42 +11,44 @@ import XCTest
 
 class MapInteractorTest: XCTestCase {
     
-    var mLakesRepository: LakesRepositoryMock?
-    var mPresenter: MapInteractorOutputMock?
-    var mInteractor: MapInteractor?
+    var lakesRepository: LakesRepositoryMock?
+    var presenter: MapInteractorOutputMock?
+    var interactor: MapInteractor?
     
     override func setUp() {
         super.setUp()
-        mLakesRepository = LakesRepositoryMock()
-        mPresenter = MapInteractorOutputMock()
-        mInteractor = MapInteractor(presenter: mPresenter, lakesDataManager: mLakesRepository)
+        lakesRepository = LakesRepositoryMock()
+        presenter = MapInteractorOutputMock()
+        interactor = MapInteractor(presenter: presenter, lakesDataManager: lakesRepository)
     }
     
     override func tearDown() {
-        self.mLakesRepository = nil
-        self.mPresenter = nil
-        self.mInteractor = nil
+        self.lakesRepository = nil
+        self.presenter = nil
+        self.interactor = nil
         super.tearDown()
     }
     
     func testRecieveLakes(){
-        mLakesRepository!.lakes = [Lake(id: 1, title: "Title", description: "Description", img: nil, lat: 0.0, lon: 0.0)]
-        
-        mInteractor?.recieveLakes()
-        
-        XCTAssertTrue(mPresenter!.lakes?.count == mLakesRepository!.lakes?.count)
-        XCTAssertNotNil(mPresenter!.lakes)
-        XCTAssertNil(mPresenter!.error)
+        lakesRepository!.resultLakes = .success([Lake(id: 1, title: "Title", description: "Description", img: nil, lat: 0.0, lon: 0.0)])
+            
+        interactor?.recieveLakes()
+        guard let lakes = try? lakesRepository!.resultLakes?.get() else {
+            XCTFail("Error get lakes")
+            return
+        }
+        XCTAssertTrue(presenter!.lakes?.count == lakes?.count)
+        XCTAssertNotNil(presenter!.lakes)
+        XCTAssertNil(presenter!.error)
     }
     
     func testFetchError() {
-        let error = LakeError.dataError("Error data")
-        mLakesRepository!.error = error
+        lakesRepository!.resultLakes = .failure(.dataError("Error data"))
         
-        mInteractor?.recieveLakes()
+        interactor?.recieveLakes()
         
-        XCTAssertNotNil(mPresenter!.error)
-        XCTAssertNil(mPresenter!.lakes)
+        XCTAssertNotNil(presenter!.error)
+        XCTAssertNil(presenter!.lakes)
     }
     
     

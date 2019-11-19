@@ -13,7 +13,7 @@ import GoogleMaps
 final class MapAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(LakesRepositoryProtocol.self) { (resolver) -> JsonLakesRepository in JsonLakesRepository() }
+        container.register(LakesRepositoryProtocol.self) { resolver -> JsonLakesRepository in JsonLakesRepository() }
         container.register(MapInteractor.self) { (resolver, presenter: MapPresenter) -> MapInteractor in
             let repository = resolver.resolve(LakesRepositoryProtocol.self)
             let interactor = MapInteractor(lakesDataManager: repository)
@@ -40,7 +40,6 @@ final class MapAssembly: Assembly {
             viewController.mPresenter = resolver.resolve(MapPresenter.self, argument: viewController)
             mapView.delegate = viewController
             viewController.mPresenter?.recieveLakes()
-            
         }
     }
 }

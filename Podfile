@@ -7,13 +7,11 @@ target 'lakes' do
   pod 'Swinject'
   pod 'SwinjectStoryboard'
   pod 'GoogleMaps'
-#  pod 'SwiftyJSON', '~> 4.0'
   pod 'SDWebImage'
   # Pods for lakes
 
   target 'lakesTests' do
     inherit! :search_paths
-    pod 'GoogleMaps'
     # Pods for testing
   end
 

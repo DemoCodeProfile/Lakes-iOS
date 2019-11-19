@@ -8,18 +8,17 @@
 @testable import lakes
 
 class LakesRepositoryMock: LakesRepositoryProtocol {
-    var error: Error?
-    var lakes: [Lake]?
     
-    var lake: Lake?
+    var resultLakes: Result<[Lake], LakeError>?
+    var resultLake: Result<Lake, LakeError>?
     
-    func fetchAll(closure: @escaping (Error?, [Lake]?) -> Void) {
-        closure(error, lakes)
+    func fetchAll(closure: @escaping (Result<[Lake], LakeError>) -> Void) {
+        guard let resultLakes = resultLakes else { return }
+        closure(resultLakes)
     }
     
-    func fetchById(specification: BaseSpecification, closure: @escaping (Error?, Lake?) -> Void) {
-        closure(error, lake)
+    func fetchById(specification: BaseSpecification, closure: @escaping (Result<Lake, LakeError>) -> Void) {
+        guard let resultLake = resultLake else { return }
+        closure(resultLake)
     }
-    
-    
 }

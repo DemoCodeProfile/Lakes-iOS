@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MapInteractorInputProtocol: class {
-    var mPresenter: MapInteractorOutputProtocol? {get set}
+    var mPresenter: MapInteractorOutputProtocol? { get set }
     
     func recieveLakes()
 }
@@ -19,8 +19,7 @@ protocol MapInteractorOutputProtocol: class {
     func fetchError(error: Error)
 }
 
-class MapInteractor: MapInteractorInputProtocol {
-    
+final class MapInteractor: MapInteractorInputProtocol {
     
     weak var mPresenter: MapInteractorOutputProtocol?
     var mLakesDataManager: LakesRepositoryProtocol?
@@ -30,24 +29,23 @@ class MapInteractor: MapInteractorInputProtocol {
         self.mLakesDataManager = lakesDataManager
     }
     
-    convenience init(lakesDataManager: LakesRepositoryProtocol?){
+    convenience init(lakesDataManager: LakesRepositoryProtocol?) {
         self.init(presenter: nil, lakesDataManager: lakesDataManager)
     }
     
     func recieveLakes() {
-        self.mLakesDataManager?.fetchAll(closure: { (error, lakes) in
-            if let lakes = lakes {
+        self.mLakesDataManager?.fetchAll(closure: { [weak self] result in
+            guard let `self` = self else { return }
+            switch result {
+            case .success(let lakes):
                 self.mPresenter?.recievedLakes(lakes: lakes)
-            } else {
-                if let error = error {
-                    self.mPresenter?.fetchError(error: error)
-                }
+            case .failure(let error):
+                self.mPresenter?.fetchError(error: error)
             }
         })
     }
     
-    func setPresenter(presenter: MapInteractorOutputProtocol?){
+    func setPresenter(presenter: MapInteractorOutputProtocol?) {
         self.mPresenter = presenter
     }
-    
 }
